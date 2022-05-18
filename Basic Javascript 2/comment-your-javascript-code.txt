@@ -1,0 +1,3 @@
+/* Komen dengan banyak baris
+baris 2*/
+// komen dengan hanya satu baris.
