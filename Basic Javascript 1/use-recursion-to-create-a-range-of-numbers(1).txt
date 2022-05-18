@@ -1,0 +1,12 @@
+function rangeOfNumbers(startNum, endNum) {
+   return endNum - startNum === 0 ? [startNum]
+    :rangeOfNumbers(startNum, endNum - 1).concat(endNum);
+   
+   /*if (endNum - startNum === 0) {
+    return [startNum];
+  } else {
+    const arr = rangeOfNumbers(startNum, endNum- 1);
+    arr.push(endNum);
+    return arr;
+  }*/
+};

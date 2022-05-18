@@ -1,0 +1,4 @@
+unshift = masuk dari depan
+shift =ngeluarin depan
+push = masuk dr belakang
+pop=ngeluarin blkg
