@@ -1,0 +1,17 @@
+function quickCheck(arr, elem) {
+  // Only change code below this line
+  
+  let newArr = arr.indexOf(elem);
+  if (newArr==-1){
+    return false;
+    
+  }else{
+    return true;
+  }
+  
+  return newArr;
+  
+  // Only change code above this line
+}
+
+console.log(quickCheck(['squash', 'onions', 'shallots'], 'mushrooms'));

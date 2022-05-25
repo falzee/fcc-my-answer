@@ -1,0 +1,10 @@
+let yourArray=  [1,2,3,4,5,"string",10<9
+];// Change this line
+let yArray=  ["string"
+];// Change this line
+let yoArray=  [(10<9)
+];// Change this line
+let youArray=  [1,2,3,4,5
+];// Change this line
+let youraArray=  [1,2,3,4,5
+];// Change this line
