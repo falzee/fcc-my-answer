@@ -1,0 +1,14 @@
+function factorialize(num) {
+  let nwNum = 1;
+  for (let i=2;i<=num;i++){
+    nwNum*=i;
+  }
+  return nwNum;
+   /*if (num <= 1) {
+    return num;
+  }
+  return num *(num - 1);
+*/
+}
+
+console.log(factorialize(5));
