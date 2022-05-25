@@ -1,0 +1,9 @@
+
+let base = 2;
+let exp = 3;
+function raiseToPower(base, exp) {
+  return Math.pow(base, exp);
+}
+
+let power = raiseToPower(base, exp);
+console.log(power);
