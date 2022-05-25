@@ -1,0 +1,10 @@
+// Only change code below this line
+function urlSlug(title) {
+ return title
+ .toLowerCase()
+ .trim()//hapus whitespace depan belakang
+ .split(/\W+/)//+ buat biar bisa misahin double space
+ .join("-");
+}
+// Only change code above this line
+console.log(urlSlug(" Winter Is  Coming"));

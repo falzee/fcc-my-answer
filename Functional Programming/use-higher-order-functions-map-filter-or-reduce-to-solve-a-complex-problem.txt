@@ -1,0 +1,12 @@
+const squareList = arr => {
+  // Only change code below this line
+  let newSquaredIntegers = arr
+    .filter ((num) => num > 0 && num % parseInt(num) === 0 )
+  //parseInt(num) gives an integer part of num, for example, parseInt(3.14) === 3 (hasilnya true). Using num % parseInt(num) basically gives a difference between the number and its integer part. If it isn't 0, the number is thrown out.
+    .map(num => num*num);
+  return newSquaredIntegers;
+  // Only change code above this line
+};
+
+const squaredIntegers = squareList([-3, 4.8, 5, 3, -3.2,]);
+console.log(squaredIntegers);

@@ -1,0 +1,15 @@
+function nonMutatingConcat(original, attach) {
+  // Only change code below this line
+  
+  let new1 = original.slice();
+  let new2 = attach.slice();
+  let newArr = [];
+  newArr = new1.concat(new2);
+  return newArr;
+
+  // Only change code above this line
+}
+
+const first = [1, 2, 3];
+const second = [4, 5];
+console.log(nonMutatingConcat(first, second));
