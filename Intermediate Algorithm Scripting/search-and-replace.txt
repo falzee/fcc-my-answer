@@ -1,0 +1,13 @@
+function myReplace(str, before, after) {
+  if (/^[A-Z]/.test(before)) {//ditest klo depannya yg dicari hrf Besar maka
+    after = after[0].toUpperCase() + after.substring(1)//depannya dibesarin tambahin sisa yg depan
+  } else {//klo depannya yg dicari kecil
+    after = after[0].toLowerCase() + after.substring(1)//depannya dikecilin tambahin sisa yg depan
+    //The substring() method extracts characters, between two indices (positions), from a string, and returns the substring.
+  }
+  
+  return str.replace(before, after);;
+  
+}
+
+console.log(myReplace("A quick brown fox jumped over the lazy dog", "jumped", "leaped"));

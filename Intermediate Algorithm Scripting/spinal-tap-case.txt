@@ -1,0 +1,8 @@
+function spinalCase(str) {
+  return str
+    .split(/\s|_|(?=[A-Z])/)//The ?=n quantifier matches any string that is followed by a specific string n.
+    .join("-")
+    .toLowerCase();
+}
+
+console.log(spinalCase('thisIsSpinalTap'));

@@ -1,0 +1,24 @@
+function whatIsInAName(collection, source) {
+  const newSource = Object.keys(source);
+  //dijaddiin object buat misahin induk dari anakya ex.last:capulet outputnya last
+  return collection.filter(obj =>newSource
+    .every(key=>obj.hasOwnProperty(key) && obj[key]===source[key]));
+    /*
+    We filter through the collection using .filter().
+    Next, we return a Boolean value for the .filter() method.
+    Finally, we reduce to Boolean value to be returned for the .every() method.
+     alternative:
+     return collection.filter(obj => {
+    for (let i = 0; i < souceKeys.length; i++) {
+      if (!obj.hasOwnProperty(souceKeys[i]) ||
+          obj[souceKeys[i]] !== source[souceKeys[i]]) {
+        return false;
+      }
+    }
+    return true;
+  });
+}*/
+
+}
+
+console.log(whatIsInAName([{ first: "Romeo", last: "Montague" }, { first: "Mercutio", last: null }, { first: "Tybalt", last: "Capulet" }], { last: "Capulet" }));

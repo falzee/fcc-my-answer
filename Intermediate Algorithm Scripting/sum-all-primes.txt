@@ -1,0 +1,12 @@
+function sumPrimes(num) {
+  let primes = [];//buat ditaroh ke list
+  for (let i = 2; i <= num; i++) {//2,3,4,5,6,7,8,9,10
+    if (primes.every((prime) => i % prime !== 0))//algoritma prime number
+    //2%kosong =2= true
+     //3%2 =2= true
+     //4%3=1 true ,4%2= 0 false karena pake every sekalinya ada yg false false semua
+      primes.push(i);
+  }
+  return primes.reduce((sum,value)=> sum+value,0);//pake fungsi dalem reduce buat penambahan
+}
+console.log(sumPrimes(10));

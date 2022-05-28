@@ -1,0 +1,18 @@
+function fearNotLetter(str) {
+  let currCharCode = str.charCodeAt(0);
+  let missing = undefined;
+
+  str
+    .split("")//dipisah
+    .forEach(letter => {//forEach(myfunction) method calls a function for each element in an array.
+      if (letter.charCodeAt(0) === currCharCode) {
+        currCharCode++;//bakal diulang sampe nilai yg beda jadi klo gk ada "d" bakal berhenti di "c"=99
+      } else {
+        missing = String.fromCharCode(currCharCode);//The String.fromCharCode() method converts Unicode values to characters.
+      }
+    });
+
+  return missing;
+}
+
+console.log(fearNotLetter("abce"));

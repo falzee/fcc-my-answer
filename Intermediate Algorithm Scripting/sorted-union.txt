@@ -1,0 +1,8 @@
+function uniteUnique(...arr) {
+  return [...new Set(arr.flat())];//...new buat jadiin array baru
+  //Set cuman negluarin 1 value doang jadi klo ada yg sama bakal dikeluarin 1 doang
+  //.flat() gabungin semua sampe array dalam array jadinya [ 1, 3, 2, 5, 2, 1, 4, 2, 1 ]
+
+}
+
+console.log(uniteUnique([1, 3, 2], [5, 2, 1, 4], [2, 1]));

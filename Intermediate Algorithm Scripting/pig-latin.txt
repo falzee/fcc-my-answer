@@ -1,0 +1,7 @@
+function translatePigLatin(str) {
+  return str
+  .replace(/^[aiueo]\w*/,"$&way")//$=argumen $& semua copy dari kondisi sebelumnya(/^[aiueo]\w*/)
+  .replace(/(^[^aeiou]+)(\w*)/,"$2$1ay");//dibuat jadi dua argumen $1=(^[^aeiou]+) ini buat huruf konsonan sama setelahnya (makanya pake +) $2=(\w*) 
+}
+
+console.log(translatePigLatin("california"));

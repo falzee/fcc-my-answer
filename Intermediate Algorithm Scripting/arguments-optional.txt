@@ -1,0 +1,12 @@
+function addTogether() {
+  let [first, second] = arguments;//(5)(7) dijadiin argumen dulu
+  if (typeof(first) !== "number")//tipe first=number,klo bukan number return undefined
+    return undefined;
+  if (second === undefined)//klo second nya gk ada atau undefined ex.(x)(y) jadi second langsung digabungin pake fungsi addTogether(first, second) biar jadi (x,y);
+    return (second) => addTogether(first, second);
+  if (typeof(second) !== "number")//tipe second=number,klo bukan number return undefined 
+    return undefined;
+  return first+second;//fungsi pertambahan
+}
+
+console.log(addTogether(5)(7));

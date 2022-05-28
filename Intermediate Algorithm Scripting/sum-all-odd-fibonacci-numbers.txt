@@ -1,0 +1,21 @@
+function sumFibs(num) {
+  let stRealSequence = 0;
+  let stFakeSequence = 1;//fake
+  let result = 0;
+  while (stFakeSequence <= num) {//1,1,2,3
+    if (stFakeSequence % 2 !== 0) {//apabila fake ganjil
+      
+      result += stFakeSequence; //result=result+fake
+      
+    }
+    stFakeSequence += stRealSequence;//fake=fake+real
+   
+     stRealSequence = stFakeSequence - stRealSequence;//real=fake-real
+    
+  }
+
+  return result;
+ 
+}
+
+console.log(sumFibs(4));

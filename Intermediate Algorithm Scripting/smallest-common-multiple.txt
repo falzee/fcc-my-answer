@@ -1,0 +1,26 @@
+function smallestCommons(arr) {
+  const [min, max] = arr.sort((a, b) => a - b);//buat urutin dr terkecil ke terbesar
+  const range = Array(max - min + 1)//buat jabarin misal 1,5 jadi 1,2,3,4,5
+    .fill(0)
+    .map((_, i) => i + min);
+
+  // GCD of two numbers
+  // https://en.wikipedia.org/wiki/Greatest_common_divisor#Euclid's_algorithm
+  const gcd = (a, b) => (b === 0) ? a : gcd(b, a % b);
+  //gcd = nilai pembagi terbesar
+  //klo b nilainya 0 keluarin a klo gk 0 keluarin jadi gcd a=b,b=a%b diulang terus sampe keluar 0
+  
+  
+  // LCM of two numbers
+  // https://en.wikipedia.org/wiki/Least_common_multiple#Using_the_greatest_common_divisor
+  const lcm = (a, b) => a * b / gcd(a, b);
+  //lcm = nilai pengali terkecil
+  
+  
+  // LCM of multiple numbers
+  // https://en.wikipedia.org/wiki/Least_common_multiple#Other
+  return range.reduce((multiple, curr) => lcm(multiple, curr));
+  //jadinya lcm(lcm(lcm(1,2),3),4),5)
+}
+
+console.log(smallestCommons([5,1]));

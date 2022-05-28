@@ -1,0 +1,6 @@
+function dropElements(arr, func) {
+ let sliceIndex = arr.findIndex(func);//Use ES6 findIndex() function to find the index of the element that passes the condition karena 3 ada di index[2]
+  return arr.slice(sliceIndex >= 0 ? sliceIndex : arr.length);
+  
+}
+console.log(dropElements([1, 2, 3, 4], function(n) {return n >= 3;})); 

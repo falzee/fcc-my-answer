@@ -1,0 +1,10 @@
+function destroyer(arr) {
+  var valsToRemove = Array.from(arguments).slice(1);
+  //pake argumen biar arraynya masuk semua (klo gk make jadinya cuman [1, 2, 3, 1, 2, 3]yg keluar)
+return arr.filter(function(val) {//pake filter buat array baru
+    return !valsToRemove.includes(val);//ngembaliin yg bukan valsToRemove yg ada di val(semua nilai di arr)
+  });
+//Return the filtered array, using includes() in the callback function to check if val is not in valsToRemove; returning true to keep the value in the original array or false to remove it.
+}
+
+console.log(destroyer([1, 2, 3, 1, 2, 3], 2, 3));

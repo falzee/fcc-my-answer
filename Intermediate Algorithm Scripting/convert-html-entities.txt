@@ -1,0 +1,13 @@
+function convertHTML(str) {
+  let htmlSymbol = {
+    "&": "&amp;",
+    "<": "&lt;",
+    ">": "&gt;",
+    '"': "&quot;",
+    "'": "&apos;"
+  };//buat listnya dulu
+  return str
+  .replace(/[&<>\"']/g,value=> htmlSymbol[value]);//pake replace buat ganti simbolnya (inget tanda kutip dikasi \ biar bedain sama punya string) pake global biar ganti semua terus diganti ssesuai yg ada di list pake fungsi
+}
+
+console.log(convertHTML("Dolce & Gabbana"));

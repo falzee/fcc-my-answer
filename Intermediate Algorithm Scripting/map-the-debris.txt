@@ -1,0 +1,15 @@
+function orbitalPeriod(arr) {//T=2*phi(sqrt(a^3/mu))
+  const GM = 398600.4418;//ini mu(greek)
+  const earthRadius = 6367.4447;
+  return arr.map(({ name, avgAlt }) => {//pake map buat masukinfungsi
+    let earth = earthRadius + avgAlt;//a=earthradius+avgAlt
+    let orbitalPeriod = Math.round(2 * Math.PI * Math.sqrt(Math.pow(earth, 3)/GM));
+    //Math.pow(yg mau dipangkatin,pangkatnya)
+    //Math.sqrt(aakar)
+    //Math.PI() ini phi
+    //Math.round) pembulatan
+    return { name, orbitalPeriod };
+  });
+}
+
+orbitalPeriod([{name : "sputnik", avgAlt : 35873.5553}]);
